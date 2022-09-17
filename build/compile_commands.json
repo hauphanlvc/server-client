@@ -1,0 +1,12 @@
+[
+{
+  "directory": "/home/hau/dek-soldiers/build",
+  "command": "/usr/bin/g++   -I/home/hau/dek-soldiers  -g   -o CMakeFiles/client.dir/src/client.cpp.o -c /home/hau/dek-soldiers/src/client.cpp",
+  "file": "/home/hau/dek-soldiers/src/client.cpp"
+},
+{
+  "directory": "/home/hau/dek-soldiers/build",
+  "command": "/usr/bin/g++   -I/home/hau/dek-soldiers  -g   -o CMakeFiles/client.dir/src/client_main.cpp.o -c /home/hau/dek-soldiers/src/client_main.cpp",
+  "file": "/home/hau/dek-soldiers/src/client_main.cpp"
+}
+]
