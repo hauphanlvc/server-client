@@ -1,3 +1,0 @@
-/home/hau/dek-soldiers/build/CMakeFiles/rebuild_cache.dir
-/home/hau/dek-soldiers/build/CMakeFiles/client.dir
-/home/hau/dek-soldiers/build/CMakeFiles/edit_cache.dir
