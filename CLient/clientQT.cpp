@@ -24,8 +24,30 @@ ClientQT::ClientQT(QWidget *parent) : QWidget(parent),
     connect(recvMessage, &RecvThread::finished, recvMessage, &QObject::deleteLater);
     // connect(recvMessage,SIGNAL(NewMessage(string)), this, SLOT(OnNewMessage(string)));
     // connect(recvMessage, SIGNAL(finished()), this, SLOT(Quit()));
-}
+//    ui->confirm_login_button->setDefault(true);
+    ui->list_messages_listWidget->scrollToBottom();
 
+}
+void ClientQT::keyPressEvent(QKeyEvent *event) {
+    if (event->key() == Qt::Key_Return) {
+        if (ui->stackedWidget->currentWidget() == ui->Login) {
+            ui->confirm_login_button->clicked();
+        } else if (ui->stackedWidget->currentWidget() == ui->Register ) {
+            ui->confirm_register_button->clicked();
+        } else if (ui->stackedWidget->currentWidget() == ui->ChooseRoom) {
+            ui->send_message_button->clicked();
+        } else if (ui->stackedWidget->currentWidget() == ui->AddUser ) {
+            ui->confirm_AddUser->clicked();
+        } else if (ui->stackedWidget->currentWidget() == ui->ChangePassword) {
+            ui->change_button_ChangePassword->clicked();
+        } else if (ui->stackedWidget->currentWidget() == ui->KickUser) {
+            ui->confirm_KickUser->clicked();
+        } else if (ui->stackedWidget->currentWidget() == ui->ChangeRoomName) {
+            ui->confirm_ChangeRoomName->clicked();
+        }
+
+    }
+}
 ClientQT::~ClientQT()
 {
     delete ui;
@@ -279,6 +301,7 @@ int ClientQT::RefreshChooseRoomWidget()
 
         ui->list_rooms_listWidget->addItem(item);
     }
+    ui->list_messages_listWidget->scrollToBottom();
 }
 void ClientQT::on_back_ApplicationMenu_clicked()
 {
@@ -608,6 +631,7 @@ int ClientQT::OnNewMessage(QString message)
     size.setPointSize(20);
     item->setFont(size);
     ui->list_messages_listWidget->addItem(item);
+    ui->list_messages_listWidget->scrollToItem(item);
 }
 void ClientQT::on_list_rooms_listWidget_itemClicked(QListWidgetItem *item)
 {

@@ -12,6 +12,7 @@
 #include <regex>
 #include <map>
 #include <QCloseEvent>
+#include <QKeyEvent>
 #include <QPixmap>
 #include <QShortcut>
 using std::map;
@@ -102,7 +103,9 @@ private slots:
     void on_cancel_ChangeRoomName_clicked();
     void on_confirm_ChangeRoomName_clicked();
     void closeEvent (QCloseEvent *event);
-
+//    void keyPressEvent(QKeyEvent *event);
+protected:
+      void keyPressEvent(QKeyEvent *event);
 private:
     Ui::ClientQT *ui;
     map<string,string> list_rooms_map;

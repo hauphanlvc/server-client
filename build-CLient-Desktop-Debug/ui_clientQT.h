@@ -796,7 +796,7 @@ public:
 "color: #FFFFFF;"));
         enter_room_name_CreateRoom = new QLineEdit(CreateRoom);
         enter_room_name_CreateRoom->setObjectName(QString::fromUtf8("enter_room_name_CreateRoom"));
-        enter_room_name_CreateRoom->setGeometry(QRect(60, 90, 491, 41));
+        enter_room_name_CreateRoom->setGeometry(QRect(60, 90, 601, 41));
         enter_room_name_CreateRoom->setStyleSheet(QString::fromUtf8("font-family: 'Inter';\n"
 "font-style: normal;\n"
 "font-weight: 500;\n"
@@ -817,7 +817,7 @@ public:
 "padding-top: 1px; padding-bottom: 1px;"));
         list_users_are_added_CreateRoom = new QLabel(CreateRoom);
         list_users_are_added_CreateRoom->setObjectName(QString::fromUtf8("list_users_are_added_CreateRoom"));
-        list_users_are_added_CreateRoom->setGeometry(QRect(70, 150, 221, 31));
+        list_users_are_added_CreateRoom->setGeometry(QRect(70, 150, 601, 31));
         list_users_are_added_CreateRoom->setStyleSheet(QString::fromUtf8("\n"
 "font-family: 'Inter';\n"
 "font-style: normal;\n"
@@ -830,7 +830,7 @@ public:
 "color: #FFFFFF;"));
         search_user_CreateRoom = new QLineEdit(CreateRoom);
         search_user_CreateRoom->setObjectName(QString::fromUtf8("search_user_CreateRoom"));
-        search_user_CreateRoom->setGeometry(QRect(70, 192, 351, 41));
+        search_user_CreateRoom->setGeometry(QRect(70, 192, 601, 41));
         search_user_CreateRoom->setStyleSheet(QString::fromUtf8("font-family: 'Inter';\n"
 "font-style: normal;\n"
 "font-weight: 500;\n"
@@ -851,7 +851,7 @@ public:
 "padding-top: 1px; padding-bottom: 1px;"));
         list_users_CreateRoom = new QListWidget(CreateRoom);
         list_users_CreateRoom->setObjectName(QString::fromUtf8("list_users_CreateRoom"));
-        list_users_CreateRoom->setGeometry(QRect(70, 270, 351, 291));
+        list_users_CreateRoom->setGeometry(QRect(70, 270, 611, 291));
         list_users_CreateRoom->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 255, 255);\n"
 "border-radius: 10px;\n"
 "color:rgb(53, 132, 228)"));
@@ -908,13 +908,13 @@ public:
         AddUser->setStyleSheet(QString::fromUtf8(""));
         list_users_AddUser = new QListWidget(AddUser);
         list_users_AddUser->setObjectName(QString::fromUtf8("list_users_AddUser"));
-        list_users_AddUser->setGeometry(QRect(30, 160, 301, 311));
+        list_users_AddUser->setGeometry(QRect(30, 160, 671, 311));
         list_users_AddUser->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 255, 255);\n"
 "border-radius: 10px;\n"
 "color:rgb(53, 132, 228)"));
         cancel_AddUser = new QPushButton(AddUser);
         cancel_AddUser->setObjectName(QString::fromUtf8("cancel_AddUser"));
-        cancel_AddUser->setGeometry(QRect(10, 530, 80, 51));
+        cancel_AddUser->setGeometry(QRect(90, 500, 80, 51));
         cancel_AddUser->setStyleSheet(QString::fromUtf8("background-color: #4D92FF;\n"
 "border-radius: 10px;\n"
 "color: #FFFFFF;\n"
@@ -922,7 +922,7 @@ public:
 ""));
         confirm_AddUser = new QPushButton(AddUser);
         confirm_AddUser->setObjectName(QString::fromUtf8("confirm_AddUser"));
-        confirm_AddUser->setGeometry(QRect(250, 530, 80, 51));
+        confirm_AddUser->setGeometry(QRect(590, 510, 80, 51));
         confirm_AddUser->setStyleSheet(QString::fromUtf8("background-color: #4D92FF;\n"
 "border-radius: 10px;\n"
 "color: #FFFFFF;\n"
@@ -943,7 +943,7 @@ public:
 "color: #FFFFFF;"));
         list_users_are_added_AddUser = new QLabel(AddUser);
         list_users_are_added_AddUser->setObjectName(QString::fromUtf8("list_users_are_added_AddUser"));
-        list_users_are_added_AddUser->setGeometry(QRect(30, 90, 231, 41));
+        list_users_are_added_AddUser->setGeometry(QRect(30, 90, 661, 41));
         list_users_are_added_AddUser->setStyleSheet(QString::fromUtf8("\n"
 "font-family: 'Inter';\n"
 "font-style: normal;\n"
@@ -1095,8 +1095,8 @@ public:
 
         retranslateUi(ClientQT);
 
-        stackedWidget->setCurrentIndex(2);
-        confirm_login_button->setDefault(true);
+        stackedWidget->setCurrentIndex(9);
+        confirm_login_button->setDefault(false);
 
 
         QMetaObject::connectSlotsByName(ClientQT);

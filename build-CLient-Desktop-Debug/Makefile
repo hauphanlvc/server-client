@@ -376,6 +376,7 @@ compiler_rcc_clean:
 qrc_images.cpp: ../CLient/images.qrc \
 		/usr/bin/rcc \
 		../image/face_6_FILL0_wght400_GRAD0_opsz48.png \
+		../image/soldier.png \
 		../image/jisoo_resize.png
 	/usr/bin/rcc -name images ../CLient/images.qrc -o qrc_images.cpp
 
