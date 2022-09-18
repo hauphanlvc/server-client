@@ -25,7 +25,7 @@ ClientQT::ClientQT(QWidget *parent) : QWidget(parent),
     // connect(recvMessage,SIGNAL(NewMessage(string)), this, SLOT(OnNewMessage(string)));
     // connect(recvMessage, SIGNAL(finished()), this, SLOT(Quit()));
 //    ui->confirm_login_button->setDefault(true);
-    ui->list_messages_listWidget->scrollToBottom();
+
 
 }
 void ClientQT::keyPressEvent(QKeyEvent *event) {
@@ -588,7 +588,14 @@ void ClientQT::on_send_message_button_clicked()
         QFont size;
         size.setPointSize(20);
         item->setFont(size);
-        ui->list_messages_listWidget->addItem(item);
+        auto scrollbar = ui->list_messages_listWidget->verticalScrollBar();
+        if(scrollbar == NULL || scrollbar->value() == scrollbar->maximum()) {
+             ui->list_messages_listWidget->addItem(item);
+             ui->list_messages_listWidget->scrollToBottom();
+        } else {
+            ui->list_messages_listWidget->addItem(item);
+        }
+//        ui->list_messages_listWidget->addItem(item);
         ui->input_chat->setText("");
         vector<string> message;
         string room_name = ui->room_name->text().toStdString();
@@ -630,8 +637,13 @@ int ClientQT::OnNewMessage(QString message)
     QFont size;
     size.setPointSize(20);
     item->setFont(size);
-    ui->list_messages_listWidget->addItem(item);
-    ui->list_messages_listWidget->scrollToItem(item);
+    auto scrollbar = ui->list_messages_listWidget->verticalScrollBar();
+    if(scrollbar == NULL || scrollbar->value() == scrollbar->maximum()) {
+         ui->list_messages_listWidget->addItem(item);
+         ui->list_messages_listWidget->scrollToBottom();
+    } else {
+        ui->list_messages_listWidget->addItem(item);
+    }
 }
 void ClientQT::on_list_rooms_listWidget_itemClicked(QListWidgetItem *item)
 {
@@ -684,7 +696,13 @@ void ClientQT::on_list_rooms_listWidget_itemClicked(QListWidgetItem *item)
         QFont size;
         size.setPointSize(20);
         item->setFont(size);
-        ui->list_messages_listWidget->addItem(item);
+        auto scrollbar = ui->list_messages_listWidget->verticalScrollBar();
+        if(scrollbar == NULL || scrollbar->value() == scrollbar->maximum()) {
+             ui->list_messages_listWidget->addItem(item);
+             ui->list_messages_listWidget->scrollToBottom();
+        } else {
+            ui->list_messages_listWidget->addItem(item);
+        }
     }
     
     recvMessage = new RecvThread(this, this);

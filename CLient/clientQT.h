@@ -15,6 +15,7 @@
 #include <QKeyEvent>
 #include <QPixmap>
 #include <QShortcut>
+#include <QScrollBar>
 using std::map;
 namespace Ui {
 class ClientQT;
