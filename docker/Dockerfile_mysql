@@ -1,0 +1,5 @@
+FROM mysql:8.0.30-debian
+ENV MYSQL_ROOT_PASSWORD=1
+WORKDIR /home
+COPY ./database /docker-entrypoint-initdb.d
+EXPOSE 3306

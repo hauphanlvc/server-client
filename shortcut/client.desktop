@@ -1,0 +1,6 @@
+[Desktop Entry]
+Name=client
+Exec=/bin/bash -c "$HOME/dek-soldiers/scripts/run_client.sh"
+Icon=/home/nhkduy/dek-soldiers/image/client_icon.png
+Terminal=true
+Type=Application

@@ -1,0 +1,29 @@
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: hau-mysql-pv-volume
+  namespace: hau-mysql
+spec:
+  storageClassName: hau-mysql-pv-volume
+  capacity:
+    storage: 1Gi
+  accessModes:
+    - ReadWriteMany
+    - ReadWriteOnce
+  hostPath:
+    path: "/home/soldiers_ext/hau/data_new"
+---
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: mysql-pv-claim
+  namespace: hau-mysql
+spec:
+  storageClassName: hau-mysql-pv-volume
+  accessModes:
+    - ReadWriteOnce
+    - ReadWriteMany
+  resources:
+    requests:
+      storage: 1Gi
+

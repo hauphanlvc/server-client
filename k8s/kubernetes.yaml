@@ -1,0 +1,54 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: server
+  labels:
+    app: server
+  namespace: hau-mysql 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: server
+  template:
+    metadata:
+      labels:
+        app: server
+    spec:
+      containers:
+        # - name: chat-server-mysql
+        #   image: 10.105.68.53:5000/mysql:hau
+        #   imagePullPolicy: Always
+        #   ports:
+        #     - containerPort: 3306
+        - name: server
+          image: 10.105.68.53:5000/server:hau
+          imagePullPolicy: Always
+          env:
+            - name: PORT
+              value: "8080"
+            - name: MYSQL_CONT_NAME
+              # value: "127.0.0.1"
+              value: "chat-server-mysql"
+          ports:
+            - containerPort: 8080
+      imagePullSecrets:
+        - name: intern-registry
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: server
+
+  labels:
+    app: server
+  namespace: hau-mysql 
+spec:
+  type: NodePort
+  selector:
+    app: server
+  ports:
+    - port: 8080
+      targetPort: 8080
+      nodePort: 31233
+

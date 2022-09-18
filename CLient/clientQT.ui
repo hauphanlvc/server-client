@@ -1,0 +1,1896 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>ClientQT</class>
+ <widget class="QWidget" name="ClientQT">
+  <property name="enabled">
+   <bool>true</bool>
+  </property>
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>761</width>
+    <height>674</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>ClientQT</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true"/>
+  </property>
+  <widget class="QStackedWidget" name="stackedWidget">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>761</width>
+     <height>641</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true"/>
+   </property>
+   <property name="currentIndex">
+    <number>2</number>
+   </property>
+   <widget class="QWidget" name="authentication">
+    <property name="styleSheet">
+     <string notr="true"/>
+    </property>
+    <widget class="QPushButton" name="register_button_authentication">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>500</y>
+       <width>151</width>
+       <height>61</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: #4D92FF;
+border-radius: 10px;
+color: #FFFFFF;
+
+</string>
+     </property>
+     <property name="text">
+      <string>Register</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="exit_button_authentication">
+     <property name="enabled">
+      <bool>true</bool>
+     </property>
+     <property name="geometry">
+      <rect>
+       <x>540</x>
+       <y>510</y>
+       <width>141</width>
+       <height>51</height>
+      </rect>
+     </property>
+     <property name="autoFillBackground">
+      <bool>false</bool>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(77, 146, 255);
+border-radius: 10px;
+color: #FFFFFF;
+
+</string>
+     </property>
+     <property name="text">
+      <string>Exit</string>
+     </property>
+     <property name="checkable">
+      <bool>false</bool>
+     </property>
+     <property name="checked">
+      <bool>false</bool>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="login_button_authentication">
+     <property name="geometry">
+      <rect>
+       <x>290</x>
+       <y>500</y>
+       <width>131</width>
+       <height>61</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: #4D92FF;
+border-radius: 10px;
+color: #FFFFFF;
+
+</string>
+     </property>
+     <property name="text">
+      <string>Login</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QWidget" name="ChooseRoom">
+    <property name="styleSheet">
+     <string notr="true"/>
+    </property>
+    <widget class="QLabel" name="label_message">
+     <property name="geometry">
+      <rect>
+       <x>110</x>
+       <y>10</y>
+       <width>71</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 500;
+font-size: 14px;
+line-height: 29px;
+/* identical to box height */
+background-color: #4D92FF;
+border-radius: 10px;
+color: #FFFFFF;
+
+</string>
+     </property>
+     <property name="text">
+      <string>Message</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="create_new_chat_room_button">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>60</y>
+       <width>161</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 500;
+font-size: 14px;
+line-height: 29px;
+/* identical to box height */
+
+background-color: #4D92FF;
+border-radius: 10px;
+color: #FFFFFF;
+
+
+</string>
+     </property>
+     <property name="text">
+      <string>New Chat</string>
+     </property>
+    </widget>
+    <widget class="QListWidget" name="list_rooms_listWidget">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>110</y>
+       <width>171</width>
+       <height>441</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 500;
+font-size: 14px;
+line-height: 29px;
+/* identical to box height */
+
+background-color: rgb(255, 255, 255);
+border-radius: 10px;
+color:rgb(53, 132, 228)
+
+</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="room_name">
+     <property name="geometry">
+      <rect>
+       <x>240</x>
+       <y>30</y>
+       <width>91</width>
+       <height>51</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">
+border-radius: 10px;
+font-family: 'Inter';
+font-style: normal;
+font-weight: 500;
+font-size: 14px;
+line-height: 29px;
+/* identical to box height */
+background-color: #4D92FF;
+border-radius: 10px;
+color: #FFFFFF;
+
+</string>
+     </property>
+     <property name="text">
+      <string>Room Name</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="room_setting_button">
+     <property name="geometry">
+      <rect>
+       <x>610</x>
+       <y>30</y>
+       <width>121</width>
+       <height>51</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 500;
+font-size: 14px;
+line-height: 29px;
+/* identical to box height */
+border-radius: 10px;
+background-color: #4D92FF;
+border-radius: 10px;
+color: #FFFFFF;
+
+</string>
+     </property>
+     <property name="text">
+      <string>Room Setting</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="input_chat">
+     <property name="geometry">
+      <rect>
+       <x>240</x>
+       <y>530</y>
+       <width>361</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">font-family: 'Inter';
+font-style: normal;
+font-weight: 500;
+font-size: 14px;
+line-height: 29px;
+/* identical to box height */
+
+
+
+
+background: #24262A;
+border: 1px solid #FFFFFF;
+border-radius: 10px;
+color: #FFFFFF;
+
+padding-left: 5px; padding-right: 3px;
+
+padding-top: 1px; padding-bottom: 1px;</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="send_message_button">
+     <property name="geometry">
+      <rect>
+       <x>650</x>
+       <y>530</y>
+       <width>81</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: #4D92FF;
+border-radius: 10px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 500;
+font-size: 14px;
+line-height: 29px;
+/* identical to box height */
+
+
+color: #FFFFFF;</string>
+     </property>
+     <property name="text">
+      <string>OK</string>
+     </property>
+    </widget>
+    <widget class="QListWidget" name="list_messages_listWidget">
+     <property name="geometry">
+      <rect>
+       <x>215</x>
+       <y>111</y>
+       <width>521</width>
+       <height>401</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">
+border-radius: 10px;
+font-family: 'Inter';
+font-style: normal;
+font-weight: 500;
+font-size: 14px;
+line-height: 29px;
+/* identical to box height */
+
+background-color: rgb(255, 255, 255);
+border-radius: 10px;
+color:rgb(53, 132, 228)
+</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="username_button">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>10</y>
+       <width>51</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(77, 146, 255);
+border-radius: 10px;
+color: #FFFFFF;
+
+</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QWidget" name="Login">
+    <widget class="QLabel" name="label_4">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>60</y>
+       <width>541</width>
+       <height>61</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">position: absolute;
+width: 498px;
+height: 58px;
+left: 471px;
+top: 193px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 500;
+font-size: 48px;
+line-height: 58px;
+/* identical to box height */
+
+border-radius: 10px;
+color: #FFFFFF;</string>
+     </property>
+     <property name="text">
+      <string>Login to your account</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="username_login">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>160</y>
+       <width>161</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="autoFillBackground">
+      <bool>false</bool>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 500;
+font-size: 24px;
+line-height: 29px;
+/* identical to box height */
+border-radius: 10px;
+
+color: #FFFFFF;</string>
+     </property>
+     <property name="text">
+      <string>Username</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="password_login">
+     <property name="geometry">
+      <rect>
+       <x>30</x>
+       <y>310</y>
+       <width>161</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="autoFillBackground">
+      <bool>false</bool>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">position: absolute;
+width: 118px;
+height: 29px;
+left: 410px;
+top: 323px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 500;
+font-size: 24px;
+line-height: 29px;
+/* identical to box height */
+border-radius: 10px;
+
+color: #FFFFFF;</string>
+     </property>
+     <property name="text">
+      <string>Password</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="back_button_login">
+     <property name="geometry">
+      <rect>
+       <x>40</x>
+       <y>480</y>
+       <width>101</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border-radius: 10px;
+color: #4D92FF;
+background-color: #FFFFFF;
+</string>
+     </property>
+     <property name="text">
+      <string>Back </string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="confirm_login_button">
+     <property name="geometry">
+      <rect>
+       <x>380</x>
+       <y>480</y>
+       <width>101</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border-radius: 10px;
+color: #FFFFFF;
+background-color: #4D92FF;
+</string>
+     </property>
+     <property name="text">
+      <string>Login</string>
+     </property>
+     <property name="autoDefault">
+      <bool>false</bool>
+     </property>
+     <property name="default">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="username_input_login">
+     <property name="geometry">
+      <rect>
+       <x>30</x>
+       <y>220</y>
+       <width>471</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">font-family: 'Inter';
+font-style: normal;
+font-weight: 500;
+font-size: 14px;
+line-height: 29px;
+/* identical to box height */
+
+
+
+
+background: #24262A;
+border: 1px solid #FFFFFF;
+border-radius: 10px;
+color: #FFFFFF;
+
+padding-left: 5px; padding-right: 3px;
+
+padding-top: 1px; padding-bottom: 1px;</string>
+     </property>
+     <property name="placeholderText">
+      <string>Username</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="password_input_login">
+     <property name="geometry">
+      <rect>
+       <x>30</x>
+       <y>380</y>
+       <width>471</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">font-family: 'Inter';
+font-style: normal;
+font-weight: 500;
+font-size: 14px;
+line-height: 29px;
+/* identical to box height */
+
+
+
+
+background: #24262A;
+border: 1px solid #FFFFFF;
+border-radius: 10px;
+color: #FFFFFF;
+
+padding-left: 5px; padding-right: 3px;
+
+padding-top: 1px; padding-bottom: 1px;</string>
+     </property>
+     <property name="echoMode">
+      <enum>QLineEdit::PasswordEchoOnEdit</enum>
+     </property>
+     <property name="placeholderText">
+      <string>password</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QWidget" name="ApplicationMenu">
+    <widget class="QPushButton" name="back_ApplicationMenu">
+     <property name="geometry">
+      <rect>
+       <x>30</x>
+       <y>110</y>
+       <width>241</width>
+       <height>111</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: #4D92FF;
+border-radius: 10px;
+color: #FFFFFF;
+
+</string>
+     </property>
+     <property name="text">
+      <string>Back</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="change_password_ApplicationMenu">
+     <property name="geometry">
+      <rect>
+       <x>310</x>
+       <y>110</y>
+       <width>281</width>
+       <height>111</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: #47E869;radius;
+border-radius: 10px;
+color: #FFFFFF;
+
+</string>
+     </property>
+     <property name="text">
+      <string>Change Password</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="delete_account_ApplicationMenu">
+     <property name="geometry">
+      <rect>
+       <x>30</x>
+       <y>280</y>
+       <width>251</width>
+       <height>111</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: #EF6461;
+border-radius: 10px;
+color: #FFFFFF;
+
+</string>
+     </property>
+     <property name="text">
+      <string>Delete Account</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="logout_ApplicationMenu">
+     <property name="geometry">
+      <rect>
+       <x>310</x>
+       <y>280</y>
+       <width>281</width>
+       <height>111</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: #EABF67;
+border-radius: 10px;
+color: #FFFFFF;
+</string>
+     </property>
+     <property name="text">
+      <string>Logout</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QWidget" name="Register">
+    <widget class="QLabel" name="label_3_Register">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>40</y>
+       <width>541</width>
+       <height>61</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">position: absolute;
+width: 498px;
+height: 58px;
+left: 471px;
+top: 193px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 500;
+font-size: 48px;
+line-height: 58px;
+/* identical to box height */
+
+
+color: #FFFFFF;</string>
+     </property>
+     <property name="text">
+      <string>Register new account</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="username_Register">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>140</y>
+       <width>161</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="autoFillBackground">
+      <bool>false</bool>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">position: absolute;
+width: 118px;
+height: 29px;
+left: 410px;
+top: 323px;
+border-radius: 10px;
+font-family: 'Inter';
+font-style: normal;
+font-weight: 500;
+font-size: 24px;
+line-height: 29px;
+/* identical to box height */
+
+
+color: #FFFFFF;</string>
+     </property>
+     <property name="text">
+      <string>Username</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="password_Register">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>280</y>
+       <width>161</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="autoFillBackground">
+      <bool>false</bool>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">position: absolute;
+width: 118px;
+height: 29px;
+left: 410px;
+top: 323px;
+border-radius: 10px;
+font-family: 'Inter';
+font-style: normal;
+font-weight: 500;
+font-size: 24px;
+line-height: 29px;
+/* identical to box height */
+
+
+color: #FFFFFF;</string>
+     </property>
+     <property name="text">
+      <string>Password</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="back_button_Register">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>530</y>
+       <width>101</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border-radius: 10px;
+color: #4D92FF;
+background-color: #FFFFFF;
+</string>
+     </property>
+     <property name="text">
+      <string>Back </string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="confirm_register_button">
+     <property name="geometry">
+      <rect>
+       <x>370</x>
+       <y>530</y>
+       <width>101</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border-radius: 10px;
+color: #FFFFFF;
+background-color: #4D92FF;
+</string>
+     </property>
+     <property name="text">
+      <string>Register</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="username_input_Register">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>210</y>
+       <width>471</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">font-family: 'Inter';
+font-style: normal;
+font-weight: 500;
+font-size: 14px;
+line-height: 29px;
+/* identical to box height */
+
+
+
+
+background: #24262A;
+border: 1px solid #FFFFFF;
+border-radius: 10px;
+color: #FFFFFF;
+
+padding-left: 5px; padding-right: 3px;
+
+padding-top: 1px; padding-bottom: 1px;</string>
+     </property>
+     <property name="placeholderText">
+      <string>username</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="password_input_Register">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>350</y>
+       <width>471</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">font-family: 'Inter';
+font-style: normal;
+font-weight: 500;
+font-size: 14px;
+line-height: 29px;
+/* identical to box height */
+
+
+
+
+background: #24262A;
+border: 1px solid #FFFFFF;
+border-radius: 10px;
+color: #FFFFFF;
+
+padding-left: 5px; padding-right: 3px;
+
+padding-top: 1px; padding-bottom: 1px;</string>
+     </property>
+     <property name="echoMode">
+      <enum>QLineEdit::PasswordEchoOnEdit</enum>
+     </property>
+     <property name="placeholderText">
+      <string>password</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="retype_password_input_Register">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>460</y>
+       <width>471</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">font-family: 'Inter';
+font-style: normal;
+font-weight: 500;
+font-size: 14px;
+line-height: 29px;
+/* identical to box height */
+
+
+
+
+background: #24262A;
+border: 1px solid #FFFFFF;
+border-radius: 10px;
+color: #FFFFFF;
+
+padding-left: 5px; padding-right: 3px;
+
+padding-top: 1px; padding-bottom: 1px;</string>
+     </property>
+     <property name="echoMode">
+      <enum>QLineEdit::PasswordEchoOnEdit</enum>
+     </property>
+     <property name="placeholderText">
+      <string>retype password</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="password_Register_2">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>400</y>
+       <width>241</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="autoFillBackground">
+      <bool>false</bool>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">position: absolute;
+width: 118px;
+height: 29px;
+left: 410px;
+top: 323px;
+border-radius: 10px;
+font-family: 'Inter';
+font-style: normal;
+font-weight: 500;
+font-size: 24px;
+line-height: 29px;
+/* identical to box height */
+
+
+color: #FFFFFF;</string>
+     </property>
+     <property name="text">
+      <string>Retype Password</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QWidget" name="ChangePassword">
+    <widget class="QLabel" name="label_ChangePassword">
+     <property name="geometry">
+      <rect>
+       <x>70</x>
+       <y>20</y>
+       <width>441</width>
+       <height>61</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">font-family: 'Inter';
+font-style: normal;
+font-weight: 500;
+font-size: 48px;
+line-height: 58px;
+/* identical to box height */
+border-radius: 10px;
+
+color: #FFFFFF;</string>
+     </property>
+     <property name="text">
+      <string>Change Password</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_old_password_ChangePassword">
+     <property name="geometry">
+      <rect>
+       <x>60</x>
+       <y>110</y>
+       <width>181</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">font-family: 'Inter';
+font-style: normal;
+font-weight: 500;
+font-size: 24px;
+line-height: 29px;
+/* identical to box height */
+border-radius: 10px;
+
+color: #FFFFFF;</string>
+     </property>
+     <property name="text">
+      <string>Old Password</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_new_password_ChangePassword">
+     <property name="geometry">
+      <rect>
+       <x>60</x>
+       <y>220</y>
+       <width>181</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">font-family: 'Inter';
+font-style: normal;
+font-weight: 500;
+font-size: 24px;
+line-height: 29px;
+/* identical to box height */
+border-radius: 10px;
+
+color: #FFFFFF;</string>
+     </property>
+     <property name="text">
+      <string>New Password</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_retype_new_password_ChangePassword">
+     <property name="geometry">
+      <rect>
+       <x>60</x>
+       <y>330</y>
+       <width>291</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">font-family: 'Inter';
+font-style: normal;
+font-weight: 500;
+font-size: 24px;
+line-height: 29px;
+/* identical to box height */
+border-radius: 10px;
+
+color: #FFFFFF;</string>
+     </property>
+     <property name="text">
+      <string>Retype new Password</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="change_button_ChangePassword">
+     <property name="geometry">
+      <rect>
+       <x>380</x>
+       <y>480</y>
+       <width>101</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border-radius: 10px;
+color: #FFFFFF;
+background-color: #4D92FF;
+</string>
+     </property>
+     <property name="text">
+      <string>Change</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="back_button_ChangePassword">
+     <property name="geometry">
+      <rect>
+       <x>60</x>
+       <y>480</y>
+       <width>101</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border-radius: 10px;
+color: #4D92FF;
+background-color: #FFFFFF;
+</string>
+     </property>
+     <property name="text">
+      <string>Back</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="old_password_input_ChangePassword">
+     <property name="geometry">
+      <rect>
+       <x>60</x>
+       <y>160</y>
+       <width>431</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">font-family: 'Inter';
+font-style: normal;
+font-weight: 500;
+font-size: 14px;
+line-height: 29px;
+/* identical to box height */
+
+
+
+
+background: #24262A;
+border: 1px solid #FFFFFF;
+border-radius: 10px;
+color: #FFFFFF;
+
+padding-left: 5px; padding-right: 3px;
+
+padding-top: 1px; padding-bottom: 1px;</string>
+     </property>
+     <property name="echoMode">
+      <enum>QLineEdit::PasswordEchoOnEdit</enum>
+     </property>
+     <property name="placeholderText">
+      <string>old password</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="new_password_input_ChangePassword">
+     <property name="geometry">
+      <rect>
+       <x>60</x>
+       <y>270</y>
+       <width>431</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">font-family: 'Inter';
+font-style: normal;
+font-weight: 500;
+font-size: 14px;
+line-height: 29px;
+/* identical to box height */
+
+
+
+
+background: #24262A;
+border: 1px solid #FFFFFF;
+border-radius: 10px;
+color: #FFFFFF;
+
+padding-left: 5px; padding-right: 3px;
+
+padding-top: 1px; padding-bottom: 1px;</string>
+     </property>
+     <property name="echoMode">
+      <enum>QLineEdit::PasswordEchoOnEdit</enum>
+     </property>
+     <property name="placeholderText">
+      <string>new passsword</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="retype_new_password_input_ChangePassword">
+     <property name="geometry">
+      <rect>
+       <x>60</x>
+       <y>390</y>
+       <width>431</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">font-family: 'Inter';
+font-style: normal;
+font-weight: 500;
+font-size: 14px;
+line-height: 29px;
+/* identical to box height */
+
+
+
+
+background: #24262A;
+border: 1px solid #FFFFFF;
+border-radius: 10px;
+color: #FFFFFF;
+
+padding-left: 5px; padding-right: 3px;
+
+padding-top: 1px; padding-bottom: 1px;</string>
+     </property>
+     <property name="echoMode">
+      <enum>QLineEdit::PasswordEchoOnEdit</enum>
+     </property>
+     <property name="placeholderText">
+      <string>retype new password</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QWidget" name="DeleteAccount">
+    <widget class="QLabel" name="label">
+     <property name="geometry">
+      <rect>
+       <x>200</x>
+       <y>40</y>
+       <width>181</width>
+       <height>111</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">
+font-family: 'Inter';
+font-style: normal;
+font-weight: 500;
+font-size: 30px;
+line-height: 58px;
+/* identical to box height */
+border-radius: 10px;
+
+color: #FFFFFF;</string>
+     </property>
+     <property name="text">
+      <string>Notification</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_2">
+     <property name="geometry">
+      <rect>
+       <x>100</x>
+       <y>190</y>
+       <width>381</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">
+font-family: 'Inter';
+font-style: normal;
+font-weight: 500;
+font-size: 20px;
+line-height: 58px;
+/* identical to box height */
+border-radius: 10px;
+
+color: #FFFFFF;</string>
+     </property>
+     <property name="text">
+      <string>Do you want to delete your account?</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="yes_button">
+     <property name="geometry">
+      <rect>
+       <x>370</x>
+       <y>370</y>
+       <width>111</width>
+       <height>51</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border-radius: 10px;
+color: #FFFFFF;
+background-color: #4D92FF;
+</string>
+     </property>
+     <property name="text">
+      <string>Yes</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="no_button">
+     <property name="geometry">
+      <rect>
+       <x>70</x>
+       <y>370</y>
+       <width>111</width>
+       <height>51</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border-radius: 10px;
+color: #4D92FF;
+background-color: #FFFFFF;
+</string>
+     </property>
+     <property name="text">
+      <string>No</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QWidget" name="CreateRoom">
+    <widget class="QLabel" name="label_3">
+     <property name="geometry">
+      <rect>
+       <x>60</x>
+       <y>40</y>
+       <width>241</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">
+font-family: 'Inter';
+font-style: normal;
+font-weight: 500;
+font-size: 20px;
+line-height: 58px;
+/* identical to box height */
+
+border-radius: 10px;
+color: #FFFFFF;</string>
+     </property>
+     <property name="text">
+      <string>Create new chat room</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="enter_room_name_CreateRoom">
+     <property name="geometry">
+      <rect>
+       <x>60</x>
+       <y>90</y>
+       <width>491</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">font-family: 'Inter';
+font-style: normal;
+font-weight: 500;
+font-size: 14px;
+line-height: 29px;
+/* identical to box height */
+
+
+
+
+background: #24262A;
+border: 1px solid #FFFFFF;
+border-radius: 10px;
+color: #FFFFFF;
+
+padding-left: 5px; padding-right: 3px;
+
+padding-top: 1px; padding-bottom: 1px;</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="placeholderText">
+      <string>Enter room name</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="list_users_are_added_CreateRoom">
+     <property name="geometry">
+      <rect>
+       <x>70</x>
+       <y>150</y>
+       <width>221</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">
+font-family: 'Inter';
+font-style: normal;
+font-weight: 500;
+font-size: 20px;
+line-height: 58px;
+/* identical to box height */
+background-color: #4D92FF;
+border-radius: 10px;
+color: #FFFFFF;</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="search_user_CreateRoom">
+     <property name="geometry">
+      <rect>
+       <x>70</x>
+       <y>192</y>
+       <width>351</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">font-family: 'Inter';
+font-style: normal;
+font-weight: 500;
+font-size: 14px;
+line-height: 29px;
+/* identical to box height */
+
+
+
+
+background: #24262A;
+border: 1px solid #FFFFFF;
+border-radius: 10px;
+color: #FFFFFF;
+
+padding-left: 5px; padding-right: 3px;
+
+padding-top: 1px; padding-bottom: 1px;</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="placeholderText">
+      <string>Search</string>
+     </property>
+    </widget>
+    <widget class="QListWidget" name="list_users_CreateRoom">
+     <property name="geometry">
+      <rect>
+       <x>70</x>
+       <y>270</y>
+       <width>351</width>
+       <height>291</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(255, 255, 255);
+border-radius: 10px;
+color:rgb(53, 132, 228)</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="confirm_CreateRoom">
+     <property name="geometry">
+      <rect>
+       <x>310</x>
+       <y>580</y>
+       <width>80</width>
+       <height>51</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: #4D92FF;
+border-radius: 10px;
+color: #FFFFFF;</string>
+     </property>
+     <property name="text">
+      <string>OK</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="cancel_CreateRoom">
+     <property name="geometry">
+      <rect>
+       <x>90</x>
+       <y>580</y>
+       <width>80</width>
+       <height>51</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: #4D92FF;
+border-radius: 10px;
+color: #FFFFFF;</string>
+     </property>
+     <property name="text">
+      <string>Cancel</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QWidget" name="RoomSetting">
+    <widget class="QPushButton" name="add_user_RoomSetting">
+     <property name="geometry">
+      <rect>
+       <x>210</x>
+       <y>490</y>
+       <width>151</width>
+       <height>61</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: #4D92FF;
+border-radius: 10px;
+color: #FFFFFF;
+
+</string>
+     </property>
+     <property name="text">
+      <string>Add User</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="kick_user_RoomSetting">
+     <property name="geometry">
+      <rect>
+       <x>570</x>
+       <y>490</y>
+       <width>141</width>
+       <height>61</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: #4D92FF;
+border-radius: 10px;
+color: #FFFFFF;
+
+</string>
+     </property>
+     <property name="text">
+      <string>Kick User</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="cancel_RoomSetting">
+     <property name="geometry">
+      <rect>
+       <x>30</x>
+       <y>490</y>
+       <width>141</width>
+       <height>61</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: #4D92FF;
+border-radius: 10px;
+color: #FFFFFF;
+
+</string>
+     </property>
+     <property name="text">
+      <string>Cancel</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="modify_room_name_RoomSetting">
+     <property name="geometry">
+      <rect>
+       <x>400</x>
+       <y>490</y>
+       <width>151</width>
+       <height>61</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: #4D92FF;
+border-radius: 10px;
+color: #FFFFFF;
+
+</string>
+     </property>
+     <property name="text">
+      <string>Modify room name</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QWidget" name="AddUser">
+    <property name="styleSheet">
+     <string notr="true"/>
+    </property>
+    <widget class="QListWidget" name="list_users_AddUser">
+     <property name="geometry">
+      <rect>
+       <x>30</x>
+       <y>160</y>
+       <width>301</width>
+       <height>311</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(255, 255, 255);
+border-radius: 10px;
+color:rgb(53, 132, 228)</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="cancel_AddUser">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>530</y>
+       <width>80</width>
+       <height>51</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: #4D92FF;
+border-radius: 10px;
+color: #FFFFFF;
+
+</string>
+     </property>
+     <property name="text">
+      <string>Cancel</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="confirm_AddUser">
+     <property name="geometry">
+      <rect>
+       <x>250</x>
+       <y>530</y>
+       <width>80</width>
+       <height>51</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: #4D92FF;
+border-radius: 10px;
+color: #FFFFFF;
+
+</string>
+     </property>
+     <property name="text">
+      <string>OK</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_5">
+     <property name="geometry">
+      <rect>
+       <x>30</x>
+       <y>10</y>
+       <width>171</width>
+       <height>61</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">
+font-family: 'Inter';
+font-style: normal;
+font-weight: 500;
+font-size: 20px;
+line-height: 58px;
+/* identical to box height */
+
+border-radius: 10px;
+color: #FFFFFF;</string>
+     </property>
+     <property name="text">
+      <string>Add User</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="list_users_are_added_AddUser">
+     <property name="geometry">
+      <rect>
+       <x>30</x>
+       <y>90</y>
+       <width>231</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">
+font-family: 'Inter';
+font-style: normal;
+font-weight: 500;
+font-size: 20px;
+line-height: 58px;
+/* identical to box height */
+background-color: #4D92FF;
+border-radius: 10px;
+color: #FFFFFF;
+
+</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QWidget" name="KickUser">
+    <widget class="QLabel" name="label_6">
+     <property name="geometry">
+      <rect>
+       <x>70</x>
+       <y>40</y>
+       <width>171</width>
+       <height>61</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">
+font-family: 'Inter';
+font-style: normal;
+font-weight: 500;
+font-size: 20px;
+line-height: 58px;
+/* identical to box height */
+border-radius: 10px;
+
+color: #FFFFFF;</string>
+     </property>
+     <property name="text">
+      <string>Kick User</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="cancel_KickUser">
+     <property name="geometry">
+      <rect>
+       <x>100</x>
+       <y>490</y>
+       <width>80</width>
+       <height>51</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: #4D92FF;
+border-radius: 10px;
+color: #FFFFFF;
+
+</string>
+     </property>
+     <property name="text">
+      <string>Cancel</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="confirm_KickUser">
+     <property name="geometry">
+      <rect>
+       <x>560</x>
+       <y>490</y>
+       <width>80</width>
+       <height>51</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: #4D92FF;
+border-radius: 10px;
+color: #FFFFFF;
+
+</string>
+     </property>
+     <property name="text">
+      <string>OK</string>
+     </property>
+    </widget>
+    <widget class="QListWidget" name="list_users_KickUser">
+     <property name="geometry">
+      <rect>
+       <x>50</x>
+       <y>160</y>
+       <width>611</width>
+       <height>301</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(255, 255, 255);
+border-radius: 10px;
+color:rgb(53, 132, 228)</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="list_users_are_added_KickUser">
+     <property name="geometry">
+      <rect>
+       <x>50</x>
+       <y>110</y>
+       <width>611</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">
+font-family: 'Inter';
+font-style: normal;
+font-weight: 500;
+font-size: 20px;
+line-height: 58px;
+/* identical to box height */
+background-color: #4D92FF;
+border-radius: 10px;
+color: #FFFFFF;
+
+</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QWidget" name="ChangeRoomName">
+    <widget class="QPushButton" name="confirm_ChangeRoomName">
+     <property name="geometry">
+      <rect>
+       <x>440</x>
+       <y>260</y>
+       <width>80</width>
+       <height>51</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: #4D92FF;
+border-radius: 10px;
+color: #FFFFFF;
+
+</string>
+     </property>
+     <property name="text">
+      <string>OK</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="cancel_ChangeRoomName">
+     <property name="geometry">
+      <rect>
+       <x>60</x>
+       <y>260</y>
+       <width>80</width>
+       <height>51</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: #4D92FF;
+border-radius: 10px;
+color: #FFFFFF;
+
+</string>
+     </property>
+     <property name="text">
+      <string>Cancel</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_7">
+     <property name="geometry">
+      <rect>
+       <x>70</x>
+       <y>60</y>
+       <width>241</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">
+font-family: 'Inter';
+font-style: normal;
+font-weight: 500;
+font-size: 20px;
+line-height: 58px;
+/* identical to box height */
+border-radius: 10px;
+
+color: #FFFFFF;</string>
+     </property>
+     <property name="text">
+      <string>Change room name</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="enter_new_room_name_ChangeRoomName">
+     <property name="geometry">
+      <rect>
+       <x>60</x>
+       <y>130</y>
+       <width>491</width>
+       <height>71</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">font-family: 'Inter';
+font-style: normal;
+font-weight: 500;
+font-size: 14px;
+line-height: 29px;
+/* identical to box height */
+
+
+
+
+background: #24262A;
+border: 1px solid #FFFFFF;
+border-radius: 10px;
+color: #FFFFFF;
+
+padding-left: 5px; padding-right: 3px;
+
+padding-top: 1px; padding-bottom: 1px;</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="placeholderText">
+      <string>Enter new room name</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QWidget" name="Reload">
+    <widget class="QLabel" name="label_8">
+     <property name="geometry">
+      <rect>
+       <x>290</x>
+       <y>250</y>
+       <width>171</width>
+       <height>81</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">
+font-family: 'Inter';
+font-style: normal;
+font-weight: 500;
+font-size: 20px;
+line-height: 58px;
+/* identical to box height */
+border-radius: 10px;
+
+color: #FFFFFF;</string>
+     </property>
+     <property name="text">
+      <string>Wating ....</string>
+     </property>
+    </widget>
+   </widget>
+  </widget>
+  <widget class="QLabel" name="waiting_label">
+   <property name="geometry">
+    <rect>
+     <x>313</x>
+     <y>205</y>
+     <width>88</width>
+     <height>49</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">
+font-family: 'Inter';
+font-style: normal;
+font-weight: 500;
+font-size: 20px;
+line-height: 58px;
+/* identical to box height */
+border-radius: 10px;
+
+color: #FFFFFF;</string>
+   </property>
+   <property name="text">
+    <string>Waiting</string>
+   </property>
+  </widget>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources/>
+ <connections/>
+</ui>

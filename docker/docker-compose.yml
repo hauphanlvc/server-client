@@ -1,0 +1,27 @@
+version: '3.3'
+services:
+  chat-server-mysql:
+    container_name: chat-server-mysql
+    build:
+      context: ..
+      dockerfile: ./docker/Dockerfile_mysql
+    ports:
+      - "3306"
+
+  server:
+    container_name: server
+    build:
+      context: ..
+      dockerfile: ./docker/Dockerfile_server
+    ports:
+      - "1234:8080"
+    environment:
+      - PORT=8080
+      - MYSQL_CONT_NAME=chat-server-mysql
+    
+    working_dir: /home
+    restart: on-failure
+    depends_on: 
+      - chat-server-mysql
+    links: 
+      - chat-server-mysql

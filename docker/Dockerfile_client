@@ -1,0 +1,16 @@
+FROM ubuntu:18.04
+
+WORKDIR /home
+
+RUN apt-get update && apt-get -y --no-install-recommends install \
+    build-essential \
+    cmake \
+    libncurses5-dev
+
+COPY /scripts/build_client /home/scripts/build_client
+
+COPY /src /home/src
+RUN mkdir -p /home/build/client
+RUN chmod +x ./scripts/build_client/build_client.sh 
+CMD ./scripts/build_client/build_client.sh
+

@@ -1,0 +1,6 @@
+<RCC>
+    <qresource prefix="/">
+        <file>../image/jisoo_resize.png</file>
+        <file>../image/face_6_FILL0_wght400_GRAD0_opsz48.png</file>
+    </qresource>
+</RCC>

@@ -1,0 +1,20 @@
+FROM ubuntu:18.04
+
+WORKDIR /home
+
+RUN apt-get update && apt-get -y --no-install-recommends install \
+    build-essential \
+    cmake \
+    libmysqlcppconn-dev \
+    libgtest-dev
+
+COPY ./src /home/src
+COPY ./scripts/build_server /home/scripts/build_server
+# RUN .home/scripts/build_server/build_server.sh
+RUN mkdir -p build/server 
+RUN chmod +x ./scripts/build_server/build_server.sh 
+RUN ./scripts/build_server/build_server.sh
+
+EXPOSE 8080
+
+CMD build/server/server

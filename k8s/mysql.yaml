@@ -1,0 +1,52 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: chat-server-mysql
+  labels:
+    app: server
+  namespace: soldiers-ext
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: server
+      tier: mysql
+  # strategy:
+  #   type: RollingUpdate
+  template:
+    metadata:
+      labels:
+        app: server
+        tier: mysql
+    spec:
+      containers:
+      - name: chat-server-mysql
+        image: 10.105.68.53:5000/mysql:latest
+        imagePullPolicy: Always
+        ports:
+          - containerPort: 3306
+            name: mysql
+        volumeMounts:
+        - name: database
+          mountPath: "/var/lib/mysql"
+      volumes:
+      - name: database
+        persistentVolumeClaim:
+          claimName: local-storage-mysql-pvc
+      imagePullSecrets:
+        - name: intern-registry
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: chat-server-mysql
+  labels:
+    app: server
+spec:
+  type: ClusterIP # NodePort
+  selector:
+    app: server
+    tier: mysql
+  ports:
+    - port: 3306
+      # nodePort: 32222
